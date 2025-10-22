@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Solicitar Ayuda - Beneficiario</title>
+  <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+<div class="pagina">
+  <nav class="menu">
+    <div class="usuario">
+      <div class="foto">❤</div>
+      <div><p class="name">María López</p><p class="tipo">Beneficiario</p></div>
+    </div>
+    <div class="opciones">
+      <a href="beneficiario_dashboard.html" class="opcion">📈 Dashboard</a>
+      <a href="beneficiario_solicitar.html" class="opcion activa">📝 Solicitar Ayuda</a>
+      <a href="beneficiario_donaciones.html" class="opcion">📦 Donaciones Recibidas</a>
+      <a href="../principal_html/index.html" class="opcion">Cerrar Sesion</a>
+    </div>
+  </nav>
+
+  <main class="contenido">
+    <header class="top"><h1>Solicitar Ayuda</h1><div class="linea-naranja"></div></header>
+
+    <div class="secciones">
+      <section class="parte">
+        <div class="caja">
+          <h2 style="color:#4CAF50; margin-bottom:8px;">Nueva Solicitud de Ayuda</h2>
+          <p class="texto-chico" style="margin-bottom:18px;">Completa el formulario para solicitar ayuda alimentaria</p>
+
+          <div class="fila inicio gap">
+            <select class="selector-sol" style="flex:1; padding:12px; border:1px solid #e0e0e0; border-radius:8px;">
+              <option value="">Selecciona un producto</option>
+              <optgroup label="Perecederos">
+                <option>Manzanas</option><option>Papa</option><option>Tomate</option>
+              </optgroup>
+              <optgroup label="No perecederos">
+                <option>Arroz</option><option>Azúcar</option><option>Leche evaporada</option>
+              </optgroup>
+            </select>
+            <button class="boton boton-chico" id="btn-agregar">Agregar</button>
+          </div>
+          <p class="texto-chico" style="margin:8px 0 16px;">Selecciona productos y especifica la cantidad de cada uno</p>
+
+          <div class="separador"></div>
+          <div class="fila inicio wrap" id="lista-productos"></div>
+          <div class="separador"></div>
+
+          <label class="texto-chico" style="display:block; margin-bottom:6px;">Motivo de la Solicitud</label>
+          <textarea rows="5" style="width:100%; padding:12px; border:1px solid #e0e0e0; border-radius:8px;" placeholder="Describe brevemente por qué necesitas esta ayuda..."></textarea>
+
+          <div style="height:16px"></div>
+
+          <label class="texto-chico" style="display:block; margin-bottom:6px;">Urgencia</label>
+          <select style="width:100%; padding:12px; border:1px solid #e0e0e0; border-radius:8px;">
+            <option value="">Selecciona el nivel de urgencia</option>
+            <option>Baja - Puede esperar</option><option>Media - Dentro de 2 semanas</option><option>Alta - Urgente</option>
+          </select>
+
+          <div style="height:18px"></div>
+          <button class="boton">Enviar Solicitud</button>
+        </div>
+      </section>
+    </div>
+  </main>
+</div>
+
+<script>
+  const sel = document.querySelector('.selector-sol');
+  const lista = document.querySelector('#lista-productos');
+  document.querySelector('#btn-agregar').addEventListener('click', () => {
+    if(!sel.value) return;
+    const tag = document.createElement('span');
+    tag.className = 'producto-tag';
+    tag.textContent = sel.value;
+    lista.appendChild(tag);
+    sel.value = '';
+  });
+</script>
+</body>
+</html>

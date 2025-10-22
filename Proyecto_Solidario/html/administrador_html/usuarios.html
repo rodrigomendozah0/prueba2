@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Usuarios</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../../css/administrador.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <p class="admin-role">Admin</p>
+                <p class="admin-title">Administrador</p>
+            </div>
+            <nav class="menu">
+                <a href="dashboard.html">
+                    <i class="fas fa-chart-line"></i> Resumen
+                </a>
+                <a href="usuarios.html" class="active">
+                    <i class="fas fa-users"></i> Usuarios
+                </a>
+                <a href="donaciones.html">
+                    <i class="fas fa-hand-holding-heart"></i> Donaciones
+                </a>
+                <a href="centros.html">
+                    <i class="fas fa-building"></i> Centros de Beneficio
+                </a>
+                <a href="reportes.html">
+                    <i class="fas fa-chart-bar"></i> Reportes
+                </a>
+                <a href="../principal_html/index.html" class="logout">
+                    <i class="fas fa-sign-out-alt"></i> Cerrar Sesión
+                </a>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <!-- Alerta de nuevo usuario -->
+            <div class="alert alert-success" id="newUserAlert" style="display: none;">
+                <i class="fas fa-user-plus"></i>
+                <span id="alertMessage"></span>
+                <button class="alert-close" onclick="closeAlert()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+
+            <div class="header">
+                <h1>Gestión de Usuarios</h1>
+            </div>
+
+                    <!-- Filtros -->
+            <div class="filtros">
+            <input type="text" placeholder="Buscar por donante, beneficiario">
+            <select>
+                <option>Todos los estados</option>
+                <option>Activo</option>
+                <option>Inactivo</option>
+            </select>
+            <button class="btn-exportar">
+                Buscar
+            </button>
+            </div>
+
+            <p class="description">Gestiona todos los usuarios de la plataforma</p>
+
+            <div class="user-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Tipo</th>
+                            <th>Email</th>
+                            <th>Fecha Registro</th>
+                            <th>Estado</th>
+                            <th>Editar</th>
+                            <th>Eliminar</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Juan Pérez</td>
+                            <td><span class="tag donante">Donante</span></td>
+                            <td>juan@email.com</td>
+                            <td>15 Oct 2025</td>
+                            <td><label>Activo</label></td>
+                            <td><a href="#" class="edit-icon" onclick="editUser('Juan Pérez')"><i class="fas fa-edit"></i></a></td>
+                            <td><a href="#" class="delete-icon" onclick="confirmDelete('Juan Pérez')"><i class="fas fa-trash"></i></a></td>
+                        </tr>
+                        <tr>
+                            <td>María López</td>
+                            <td><span class="tag beneficiario">Beneficiario</span></td>
+                            <td>maria@email.com</td>
+                            <td>14 Oct 2025</td>
+                            <td><label>Inactivo</label></td>
+                            <td><a href="#" class="edit-icon" onclick="editUser('María López')"><i class="fas fa-edit"></i></a></td>
+                            <td><a href="#" class="delete-icon" onclick="confirmDelete('María López')"><i class="fas fa-trash"></i></a></td>
+                        </tr>
+                        <tr>
+                            <td>Carlos Ruiz</td>
+                            <td><span class="tag donante">Donante</span></td>
+                            <td>carlos@email.com</td>
+                            <td>13 Oct 2025</td>
+                            <td><label>Activo</label></td>
+                            <td><a href="#" class="edit-icon" onclick="editUser('Carlos Ruiz')"><i class="fas fa-edit"></i></a></td>
+                            <td><a href="#" class="delete-icon" onclick="confirmDelete('Carlos Ruiz')"><i class="fas fa-trash"></i></a></td>
+                        </tr>
+                        <tr>
+                            <td>Ana Torres</td>
+                            <td><span class="tag beneficiario">Beneficiario</span></td>
+                            <td>ana@email.com</td>
+                            <td>12 Oct 2025</td>
+                            <td><label>Inactivo</label></td>
+                            <td><a href="#" class="edit-icon" onclick="editUser('Ana Torres')"><i class="fas fa-edit"></i></a></td>
+                            <td><a href="#" class="delete-icon" onclick="confirmDelete('Ana Torres')"><i class="fas fa-trash"></i></a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

@@ -1,0 +1,283 @@
+/* === Reset === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* === Layout general === */
+body,
+html {
+    height: 100%;
+    background-color: #f8f9fa;
+}
+
+.dashboard {
+    display: flex;
+    height: 100vh;
+}
+
+/* === Sidebar === */
+.sidebar {
+    width: 250px;
+    background-color: #fff;
+    padding: 25px 20px;
+    box-sizing: border-box;
+    border-right: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    
+    /* Cambiado de space-between */
+}
+
+.user-section {
+    text-align: center;
+    margin-bottom: 35px;
+    /* Ajustado para espacio bajo usuario */
+}
+
+.user-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 15px;
+    background-color: #2aa14c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 10px;
+    color: white;
+    font-size: 30px;
+}
+
+.user-name {
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-bottom: 4px;
+}
+
+.user-role {
+    font-size: 0.9rem;
+    color: #777;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.menu-item {
+    text-decoration: none;
+    color: #222;
+    padding: 12px 18px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    position: relative;
+}
+
+.menu-item i {
+    font-size: 18px;
+    width: 22px;
+    text-align: center;
+    color: #666;
+}
+
+.menu-item:hover {
+    background-color: #e6f4ea;
+    color: #2aa14c;
+}
+
+.menu-item.active {
+    background-color: #2aa14c;
+    color: white;
+    font-weight: 700;
+    box-shadow: 0 3px 8px rgb(42 161 76 / 0.3);
+}
+
+.menu-item.active i {
+    color: white;
+}
+
+
+/* === Main === */
+.main {
+    flex-grow: 1;
+    margin-left: 20px;
+    padding: 0 30px 30px;
+    background-color: transparent;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.header {
+    padding: 25px 0 0 0;
+    color: #222;
+    font-weight: 700;
+    font-size: 28px;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.underline {
+    width: 60px;
+    height: 4px;
+    background-color: #ff6f30;
+    border-radius: 2px;
+    margin-top: 8px;
+}
+
+/* === Donations cards === */
+.donations {
+    width: 100%;
+}
+
+.donation-card {
+    width: 100%;
+    border-radius: 15px;
+    overflow: hidden;
+    margin-bottom: 40px;
+    background: #fff;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.1);
+    border: none;
+}
+
+.donation-header {
+    background: linear-gradient(90deg, #005A9C 0%, #0072C6 100%);
+    color: white;
+    padding: 25px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 700;
+    font-size: 19px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.donation-amount {
+    text-align: right;
+    font-size: 22px;
+    font-weight: 900;
+    line-height: 1.2;
+}
+
+.donation-amount small {
+    font-weight: 400;
+    font-size: 13px;
+    display: block;
+    margin-top: 3px;
+    opacity: 0.85;
+}
+
+.donation-details {
+    background-color: #f8f9fa;
+    padding: 18px 30px;
+    font-size: 14px;
+    color: #444;
+    display: flex;
+    justify-content: flex-start;
+    gap: 30px;
+    font-weight: 600;
+}
+
+.donation-details p {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.donation-details i {
+    font-size: 16px;
+    color: #005a9c;
+}
+
+.separator {
+    margin: 0 10px;
+    color: #999;
+}
+
+.donation-list {
+    padding: 25px 30px 30px 30px;
+}
+
+.donation-item {
+    border-left: 4px solid #a9d3ea;
+    padding-left: 15px;
+    margin-bottom: 28px;
+    background-color: #fcfcfc;
+    border-radius: 10px;
+}
+
+.donation-date-status {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    font-weight: 600;
+    font-size: 14px;
+    color: #555;
+}
+
+.donation-date {
+    font-weight: 600;
+    color: #555;
+}
+
+.status {
+    font-size: 12px;
+    font-weight: 600;
+    padding: 3px 12px;
+    border-radius: 15px;
+    text-transform: uppercase;
+    user-select: none;
+}
+
+.delivered {
+    background-color: #5ccc7a;
+    color: white;
+}
+
+.on-the-way {
+    background-color: #e3a84e;
+    color: white;
+}
+
+.donation-total {
+    font-weight: 700;
+    color: #0072C6;
+    font-size: 15px;
+    min-width: 70px;
+    text-align: right;
+}
+
+.donation-items {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin: 0;
+    color: #333;
+    font-size: 15px;
+}
+
+.donation-items li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.donation-items li span {
+    max-width: 70%;
+}
+
+.item-price {
+    color: #999;
+    font-weight: 600;
+    font-size: 14px;
+    white-space: nowrap;
+}

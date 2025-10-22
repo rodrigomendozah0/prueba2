@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Donaciones Recientes</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="../../css/administrador.css">
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <p class="admin-role">Admin</p>
+        <p class="admin-title">Administrador</p>
+      </div>
+      <nav class="menu">
+        <a href="dashboard.html">
+          <i class="fas fa-chart-line"></i> Resumen
+        </a>
+        <a href="usuarios.html">
+          <i class="fas fa-users"></i> Usuarios
+        </a>
+        <a href="donaciones.html" class="active">
+          <i class="fas fa-hand-holding-heart"></i> Donaciones
+        </a>
+        <a href="centros.html">
+          <i class="fas fa-building"></i> Centros de Beneficio
+        </a>
+        <a href="reportes.html">
+          <i class="fas fa-chart-bar"></i> Reportes
+        </a>
+        <a href="../principal_html/index.html" class="logout">
+          <i class="fas fa-sign-out-alt"></i> Cerrar Sesión
+        </a>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+      <header>Gestión de Donaciones</header>
+      <div class="content">
+        <!-- Tarjetas de estadísticas de donaciones -->
+        <div class="cards">
+          <div class="card total">
+            <p class="title">Total Donaciones</p>
+            <h2>12</h2>
+            <p>S/ 1484.00</p>
+          </div>
+          <div class="card entregadas">
+            <p class="title">Entregadas</p>
+            <h2>5</h2>
+            <p>42% del total</p>
+          </div>
+          <div class="card enproceso">
+            <p class="title">En Proceso</p>
+            <h2>5</h2>
+            <p>En proceso: 2 | En camino: 3</p>
+          </div>
+          <div class="card pendientes">
+            <p class="title">Pendientes</p>
+            <h2>1</h2>
+            <p>Canceladas: 1</p>
+          </div>
+        </div>
+
+        <!-- Filtros -->
+        <div class="filtros">
+          <input type="text" placeholder="Buscar por donante, beneficiario o zona...">
+          <select>
+            <option>Todos los estados</option>
+            <option>Entregado</option>
+            <option>En camino</option>
+            <option>Pendiente</option>
+            <option>Cancelado</option>
+          </select>
+          <button class="btn-exportar">
+            <i class="fas fa-download"></i> Exportar
+          </button>
+        </div>
+
+        <!-- Tabla de donaciones -->
+        <div class="tabla">
+          <h3>Listado Completo de Donaciones</h3>
+          <div class="tabla-contenedor">
+            <table>
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Donante</th>
+                  <th>Beneficiario</th>
+                  <th>Zona</th>
+                  <th>Productos</th>
+                  <th>Monto</th>
+                  <th>Estado</th>
+                  <th>Fecha</th>
+                  <th>Acciones</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>#1</td>
+                  <td>Juan Pérez<br><span class="email">juan@email.com</span></td>
+                  <td>Vaso de Leche Canto Grande</td>
+                  <td>Zona 1 - Canto Grande</td>
+                  <td>Leche Evaporada (10), Pan Francés (20), Azúcar (5 kg)</td>
+                  <td>S/ 57.00</td>
+                  <td><span class="estado entregado">Entregado</span></td>
+                  <td>15 Oct 2025</td>
+                  <td><span>mensaje</span></td>
+                </tr>
+                <tr>
+                  <td>#2</td>
+                  <td>María González<br><span class="email">maria@email.com</span></td>
+                  <td>Comedor Esperanza</td>
+                  <td>Zona 2 - Zárate</td>
+                  <td>Arroz (15 kg), Aceite (5 L)</td>
+                  <td>S/ 85.00</td>
+                  <td><span class="estado en-camino">En camino</span></td>
+                  <td>14 Oct 2025</td>
+                  <td><span>mensaje</span></td>
+                </tr>
+                <tr>
+                  <td>#3</td>
+                  <td>Carlos Ruiz<br><span class="email">carlos@email.com</span></td>
+                  <td>Olla Común San Juan</td>
+                  <td>Zona 3 - Canto Rey</td>
+                  <td>Papa (20 kg), Zanahoria (10 kg)</td>
+                  <td>S/ 45.00</td>
+                  <td><span class="estado pendiente">Pendiente</span></td>
+                  <td>13 Oct 2025</td>
+                  <td><span>mensaje</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

@@ -1,0 +1,291 @@
+/* === Reset === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* === Layout general === */
+body,
+html {
+    height: 100%;
+    background-color: #f8f9fa;
+}
+
+.header {
+    padding: 25px 0 0 0;
+    color: #222;
+    font-weight: 700;
+    position: relative;
+    margin-bottom: 30px;
+    padding-left: 50px;
+}
+
+.underline {
+    width: 60px;
+    height: 4px;
+    background-color: #ff6f30;
+    border-radius: 2px;
+    margin-top: 8px;
+}
+
+.dashboard {
+    display: flex;
+    height: 100vh;
+}
+
+/* === Sidebar === */
+.sidebar {
+    width: 250px;
+    background-color: #fff;
+    padding: 25px 20px;
+    box-sizing: border-box;
+    border-right: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    /* Cambiado de space-between */
+}
+
+.user-section {
+    text-align: center;
+    margin-bottom: 35px;
+    /* Ajustado para espacio bajo usuario */
+}
+
+.user-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 15px;
+    background-color: #2aa14c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 10px;
+    color: white;
+    font-size: 30px;
+}
+
+.user-name {
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-bottom: 4px;
+}
+
+.user-role {
+    font-size: 0.9rem;
+    color: #777;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.menu-item {
+    text-decoration: none;
+    color: #222;
+    padding: 12px 18px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    position: relative;
+}
+
+.menu-item i {
+    font-size: 18px;
+    width: 22px;
+    text-align: center;
+    color: #666;
+}
+
+.menu-item:hover {
+    background-color: #e6f4ea;
+    color: #2aa14c;
+}
+
+.menu-item.active {
+    background-color: #2aa14c;
+    color: white;
+    font-weight: 700;
+    box-shadow: 0 3px 8px rgb(42 161 76 / 0.3);
+}
+
+.menu-item.active i {
+    color: white;
+}
+
+.badge {
+    background-color: #ff6f61;
+    color: white;
+    font-size: 0.75rem;
+    padding: 2px 7px;
+    border-radius: 12px;
+    font-weight: 700;
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.main {
+    flex: 1;
+}
+
+.header h2 {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.content h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    color: #6b7280;
+    margin-bottom: 20px;
+}
+
+/* ======== CARD DE DONACIÓN ======== */
+.donation-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+    margin: 30px 50px;
+    margin-top: 10px;
+}
+
+.donation-header {
+    background: linear-gradient(90deg, #005A9C 0%, #0072C6 100%);
+    color: white;
+    padding: 25px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 700;
+    font-size: 19px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.donation-header h4 {
+    color: #fff;
+    font-size: 1.1rem;
+}
+
+.location {
+    color: #fff;
+    font-size: 0.9rem;
+    margin-top: 3px;
+}
+
+.donation-status {
+    text-align: right;
+}
+
+.status {
+    display: inline-block;
+    padding: 5px 12px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.status.delivered {
+    background-color: #dcfce7;
+    color: #16a34a;
+}
+
+.date {
+    display: block;
+    color: #fff;
+    font-size: 0.85rem;
+    margin-top: 4px;
+}
+
+/* ======== PRODUCTOS ENTREGADOS ======== */
+.section {
+    padding: 30px;
+    padding-top: 10px;
+}
+
+.section h5 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tag {
+    background-color: #f3f4f6;
+    border-radius: 20px;
+    padding: 5px 12px;
+    font-size: 0.9rem;
+}
+
+/* ======== MENSAJE DE AGRADECIMIENTO ======== */
+.message {
+    background-color: #ecfdf5;
+    border-left: 4px solid #16a34a;
+    padding: 15px 20px;
+    padding-left: 30px;
+    border-radius: 8px;
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+}
+
+.message i {
+    color: #16a34a;
+    font-size: 1.4rem;
+}
+
+.message p {
+    margin-bottom: 8px;
+}
+
+.signature {
+    color: #6b7280;
+    font-size: 0.85rem;
+}
+
+/* ======== EVIDENCIAS ======== */
+.evidence-gallery {
+    display: flex;
+    gap: 10px;
+}
+
+.evidence-gallery img {
+    width: 48%;
+    border-radius: 10px;
+    object-fit: cover;
+    height: 180px;
+}
+
+.subtitulo-header {
+    padding: 30px;
+    padding-left: 50px;
+
+}
+
+.sub-mensaje {
+    margin: 50px;
+}
+
+.subtitle {
+    margin-left: 50px;
+}
+

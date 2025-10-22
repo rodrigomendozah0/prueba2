@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard - Beneficiario</title>
+  <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+<div class="pagina">
+  <nav class="menu">
+    <div class="usuario">
+      <div class="foto">❤</div>
+      <div>
+        <p class="name">María López</p>
+        <p class="tipo">Beneficiario</p>
+      </div>
+    </div>
+    <div class="opciones">
+      <a href="beneficiario_dashboard.html" class="opcion activa">📈 Dashboard</a>
+      <a href="beneficiario_solicitar.html" class="opcion">📝 Solicitar Ayuda</a>
+      <a href="beneficiario_donaciones.html" class="opcion">📦 Donaciones Recibidas</a>
+      <a href="../principal_html/index.html" class="opcion">Cerrar Sesion</a>
+
+    </div>
+  </nav>
+
+  <main class="contenido">
+    <header class="top">
+      <h1>Dashboard</h1>
+      <div class="linea-naranja"></div>
+    </header>
+
+    <div class="secciones">
+      <div class="numeros">
+        <div class="caja caja-estadistica">
+          <div class="titulo-caja"><span>Solicitudes Pendientes</span><span>⚠️</span></div>
+          <div class="valor">3</div>
+          <div class="info">Aún en proceso</div>
+        </div>
+        <div class="caja caja-estadistica">
+          <div class="titulo-caja"><span>Solicitudes Aprobadas</span><span>🗂️</span></div>
+          <div class="valor">1</div>
+          <div class="info">Entregadas recientemente</div>
+        </div>
+        <div class="caja caja-estadistica">
+          <div class="titulo-caja"><span>Donaciones Recibidas</span><span>📦</span></div>
+          <div class="valor">8</div>
+          <div class="info">Últimos 15 días</div>
+        </div>
+      </div>
+
+      <section class="parte">
+        <div class="titulo-parte"><h2>Mis Solicitudes</h2><div class="linea-titulo"></div></div>
+        <div class="fila inicio wrap">
+          <div class="caja tarjeta-solicitud peach">
+            <div class="fila inicio"><div class="chip chip-azul">❤</div><strong>Pedido 1    Fecha:08/09/25</strong></div>
+            <p class="texto-chico" style="margin:10px 0 8px;">Productos Solicitados</p>
+            <div class="item-linea"><div><strong>Arroz</strong><div class="texto-muy-chico">28 / 40 kg</div></div><span class="etiqueta verde">NP</span></div>
+            <div class="item-linea"><div><strong>Azúcar</strong><div class="texto-muy-chico">20 / 20 kg</div></div><span class="etiqueta verde">NP</span></div>
+            <div class="item-linea"><div><strong>Leche evaporada</strong><div class="texto-muy-chico">35 / 50 unid.</div></div><span class="etiqueta verde">NP</span></div>
+            <div class="fila"><span class="texto-chico">Progreso general</span><strong>75%</strong></div>
+            <div class="barra"><div class="avance" style="width:75%"></div></div>
+            <div class="fila"><span class="estado en-camino">En proceso</span><span class="texto-muy-chico">14 Oct 2025</span></div>
+          </div>
+
+          <div class="caja tarjeta-solicitud pink">
+            <div class="fila inicio"><div class="chip chip-verde">🏠</div><strong>Pedido 2     Fecha:20/09/25</strong></div>
+            <p class="texto-chico" style="margin:10px 0 8px;">Productos Solicitados</p>
+            <div class="item-linea"><div><strong>Papa</strong><div class="texto-muy-chico">52 / 86 kg</div></div><span class="etiqueta roja">P</span></div>
+            <div class="item-linea"><div><strong>Tomate</strong><div class="texto-muy-chico">18 / 30 kg</div></div><span class="etiqueta roja">P</span></div>
+            <div class="item-linea"><div><strong>Arroz</strong><div class="texto-muy-chico">30 / 50 kg</div></div><span class="etiqueta verde">NP</span></div>
+            <div class="fila"><span class="texto-chico">Progreso general</span><strong>60%</strong></div>
+            <div class="barra"><div class="avance" style="width:60%"></div></div>
+            <div class="fila"><span class="estado en-camino">En proceso</span><span class="texto-muy-chico">13 Oct 2025</span></div>
+          </div>
+
+          <div class="caja tarjeta-solicitud green">
+            <div class="fila inicio"><div class="chip chip-verde">🏠</div><strong>Pedido 3     Fecha:01/10/25</strong></div>
+            <p class="texto-chico" style="margin:10px 0 8px;">Productos Solicitados</p>
+            <div class="item-linea"><div><strong>Fideos</strong><div class="texto-muy-chico">23 / 23 kg</div></div><span class="etiqueta verde">NP</span></div>
+            <div class="item-linea"><div><strong>Aceite vegetal</strong><div class="texto-muy-chico">15 / 15 unid.</div></div><span class="etiqueta verde">NP</span></div>
+            <div class="item-linea"><div><strong>Sal</strong><div class="texto-muy-chico">10 / 10 kg</div></div><span class="etiqueta verde">NP</span></div>
+            <div class="fila"><span class="texto-chico">Progreso general</span><strong>100%</strong></div>
+            <div class="barra"><div class="avance" style="width:100%"></div></div>
+            <div class="fila"><span class="estado entregado">Entregado</span><span class="texto-muy-chico">10 Oct 2025</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="parte">
+        <div class="titulo-parte"><h2>Donaciones Recientes</h2><div class="linea-titulo"></div></div>
+        <div class="fila inicio wrap">
+          <div class="caja tarjeta-donacion">
+            <div class="miniatura"><img src="https://s03.s3c.es/imag/_v0/2120x1157/1/1/0/1200x655_Alimentos-no-perecederos-mas-comunes.jpg" alt=""></div>
+            <div class="cuerpo"><div class="fila"><h3>Arroz</h3><span class="etiqueta verde">No perecedero</span></div>
+              <p class="texto-chico">Donante: Juan Pérez • 15 kg</p><p class="texto-muy-chico">12 Oct 2025</p></div>
+            <div class="pie"><span class="estado entregado">Recibido</span></div>
+          </div>
+          <div class="caja tarjeta-donacion">
+            <div class="miniatura"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEY49uhDNAd5PKyrYRVuxOjXndSnPboWQVDQ&s" alt=""></div>
+            <div class="cuerpo"><div class="fila"><h3>Manzanas</h3><span class="etiqueta roja">Perecedero</span></div>
+              <p class="texto-chico">Donante: María González • 10 kg</p><p class="texto-muy-chico">10 Oct 2025</p></div>
+            <div class="pie"><span class="estado entregado">Recibido</span></div>
+          </div>
+          <div class="caja tarjeta-donacion">
+            <div class="miniatura"><img src="https://s03.s3c.es/imag/_v0/2120x1157/1/1/0/1200x655_Alimentos-no-perecederos-mas-comunes.jpg" alt=""></div>
+            <div class="cuerpo"><div class="fila"><h3>Leche evaporada</h3><span class="etiqueta verde">No perecedero</span></div>
+              <p class="texto-chico">Donante: Carlos Ruiz • 12 unid.</p><p class="texto-muy-chico">08 Oct 2025</p></div>
+            <div class="pie"><span class="estado entregado">Recibido</span></div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+</div>
+</body>
+</html>

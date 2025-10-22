@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Acceso Usuario — Alimenta Perú</title>
+    <link rel="stylesheet" href="../../css/principal_styles.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="index.html" class="brand">
+                <img src="../../imagenes/img_partprincipal/logo.png" class="logo-img" alt="Logo Alimenta Perú">
+            </a>
+            <nav class="actions">
+                <a class="btn ghost" href="iniciar-sesion.html">Volver</a>
+                <a class="btn solid" href="registro.html">Registrarse</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="auth-section">
+            <div class="container">
+                <div class="auth-card user">
+                    <a href="iniciar-sesion.html" class="back-link">← Volver</a>
+
+                    <div class="auth-logo">
+                        <div class="auth-badge user">❤</div>
+                    </div>
+
+                    <h2 class="auth-title">Acceso Usuario</h2>
+                    <p class="auth-subtitle">Accede a tu cuenta solidaria</p>
+
+                    <form class="auth-form">
+                        <label class="field">
+                            <span>Correo Electrónico</span>
+                            <input type="email" placeholder="tu@email.com" required>
+                        </label>
+
+                        <label class="field">
+                            <span>Contraseña</span>
+                            <input type="password" placeholder="••••••••" required>
+                        </label>
+
+                        <label class="field">
+                            <span>Tipo de Usuario</span>
+                            <div class="select-wrap">
+                                <select id="tipoUsuario">
+                                    <option value="donante">Donante</option>
+                                    <option value="beneficiario">Beneficiario</option>
+                                </select>
+                            </div>
+                        </label>
+
+                        <button type="button" class="btn-login primary btn-link" id="btnContinuar">
+                            Continuar
+                        </button>
+                    </form>
+
+                    <script>
+                        // Escuchar el clic en el botón
+                        document.getElementById("btnContinuar").addEventListener("click", function() {
+                            const tipo = document.getElementById("tipoUsuario").value;
+
+                            if (tipo === "beneficiario") {
+                                window.location.href = "../beneficiario_html/beneficiario_dashboard.html"; // 🔹 cambia esta URL
+                            } else if (tipo === "donante") {
+                                window.location.href = "../donante.html/dashboard.html"; // 🔹 cambia esta URL
+                            }
+                        });
+                    </script>
+
+
+                    <p class="auth-register">
+                        ¿No tienes cuenta? 
+                        <a href="registro.html" class="register-link">Regístrate aquí</a>
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>© 2025 Alimenta Perú.</p>
+        </div>
+    </footer>
+</body>
+</html>

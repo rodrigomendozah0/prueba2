@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donar - Cariño Solidario</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+    <!-- BARRA DE NAVEGACIÓN (IGUAL AL DASHBOARD) -->
+    <div class="pagina">
+        <nav class="menu">
+            <div class="usuario">
+                <div class="foto">❤️</div>
+                <div>
+                    <p class="name">Juan Pérez</p>
+                    <p class="tipo">Donante</p>
+                </div>
+            </div>
+            
+            <div class="opciones">
+                <a href="dashboard.html" class="opcion">📈 Dashboard</a>
+                <a href="donar_donante.html" class="opcion activa">🛒 Donar</a>
+                <a href="donaciones.html" class="opcion">📋 Historial</a>
+                <a href="mensaje.html" class="opcion">💬 Mensajes</a>
+            </div>
+            
+            <a href="../principal_html/index.html" class="opcion">
+            <button class="salir">🚪 Cerrar Sesión</button></a>
+        </nav>
+
+        <!-- CONTENIDO PRINCIPAL DE DONAR -->
+        <main class="contenido">
+            <header class="top">
+                <h1>Realiza tu Donación</h1>
+                <div class="linea-naranja"></div>
+            </header>
+            
+            <div class="secciones">
+                <!-- SECCION 1: ZONAS URGENTES -->
+            <section class="parte">
+                <div class="seccion-donar"> 
+                    <div class="grid-zonas-urgentes">
+                        <div class="titulo-seccion">
+                            <h2 style="color:red">Zonas que Necesitan Ayuda Urgente</h2>
+                            <p class="descripcion-seccion">Estas zonas no han recibido donaciones recientemente y requieren apoyo prioritario</p>
+                        </div>
+                        
+                        <div class="contenedor-zonas">
+                            <!-- Zona 1 -->
+                            <div class="zona-item">
+                                <div class="prioridad-texto">Alta prioridad</div>
+                                <div class="imagen-zona">
+                                    <img src="../../imagenes/comedor1_sjl.png" alt="Zona Canto Grande">
+                                </div>
+                                <div class="contenido-zona">
+                                    <h3>Zona 1 - Canto Grande</h3>
+                                    <div class="dias-sin-ayuda">Última donación: hace 5 días</div>
+                                    
+                                </div>
+                            </div>
+                            
+                            <!-- Zona 2 -->
+                            <div class="zona-item">
+                                <div class="prioridad-texto">Alta prioridad</div>
+                                <div class="imagen-zona">
+                                    <img src="../../imagenes/comedor2.png" alt="Zona Las Flores">
+                                </div>
+                                <div class="contenido-zona">
+                                    <h3>Zona 4 - Las Flores</h3>
+                                    <div class="dias-sin-ayuda">Última donación: hace 7 días</div>
+                                    
+                                </div>
+                            </div>
+                            
+                            <!-- Zona 3 -->
+                            <div class="zona-item">
+                                <div class="prioridad-texto">Alta prioridad</div>
+                                <div class="imagen-zona">
+                                    
+                                    <img src="../../imagenes/comedor3.png" alt="Zona Bayóvar">
+                                </div>
+                                <div class="contenido-zona">
+                                    <h3>Zona 6 - Bayóvar</h3>
+                                    <div class="dias-sin-ayuda">Última donación: hace 6 días</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- SECCIÓN REALIZA TU DONACIÓN -->
+            <section class="parte">
+                <div class="seccion-donar">
+                    <!-- TÍTULO FUERA DE LA CAJA -->
+                    <div class="titulo-seccion">
+                        <h2>Realiza tu Donación</h2>
+                        <p class="descripcion-seccion">Selecciona la zona, asociación y productos a donar</p>
+                    </div>
+                    
+                    <!-- CONTENEDOR CON BORDE -->
+                    <div class="contenedor-pasos">
+                        <!-- PASO 1: SELECCIONA LA ZONA -->
+                        <div class="paso-donacion">
+                            <div class="numero-paso" data-paso="1">Selecciona la Zona</div>
+                            
+                            <div class="grid-zonas-seleccion">
+                                <!-- Zona 1 - Alta Prioridad -->
+                                <div class="zona-paso alta-prioridad">
+                                    <div class="prioridad-badge">Alta Prioridad</div>
+                                    <div class="imagen-zona">
+                                        <img src="../../imagenes/comedor4.png" alt="Zona Canto Grande">
+                                    </div>
+                                    <div class="contenido-zona">
+                                        <h4>Zona 1 - Canto Grande</h4>
+                                        <div class="dias-donacion">Última donación: hace 5 días</div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Zona 2 - Alta Prioridad -->
+                                <div class="zona-paso alta-prioridad">
+                                    <div class="prioridad-badge">Alta Prioridad</div>
+                                    <div class="imagen-zona">
+                                        <img src="../../imagenes/comedor5.png" alt="Zona Zárate">
+                                    </div>
+                                    <div class="contenido-zona">
+                                        <h4>Zona 2 - Zárate</h4>
+                                        <div class="dias-donacion">Última donación: hace 2 días</div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Zona 3 - Baja Prioridad -->
+                                <div class="zona-paso baja-prioridad">
+                                    <div class="prioridad-badge">Baja Prioridad</div>
+                                    <div class="imagen-zona">
+                                        <img src="../../imagenes/comedor6.png" alt="Zona Canto Rey">
+                                    </div>
+                                    <div class="contenido-zona">
+                                        <h4>Zona 3 - Canto Rey</h4>
+                                        <div class="dias-donacion">Última donación: hace 3 días</div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Zona 4 - Sin Prioridad -->
+                                <div class="zona-paso baja-prioridad">
+                                    <div class="prioridad-badge">Baja Prioridad</div>
+                                    <div class="imagen-zona">
+                                        <img src="../../imagenes/comedor2.png" alt="Zona Las Flores">
+                                    </div>
+                                    <div class="contenido-zona">
+                                        <h4>Zona 4 - Las Flores</h4>
+                                        <div class="dias-donacion">Última donación: hace 7 días</div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Zona 5 - Alta Prioridad -->
+                                <div class="zona-paso alta-prioridad">
+                                    <div class="prioridad-badge">Alta Prioridad</div>
+                                    <div class="imagen-zona">
+                                        <img src="../../imagenes/comedor1_sjl.png" alt="Zona Mariscal Cáceres">
+                                    </div>
+                                    <div class="contenido-zona">
+                                        <h4>Zona 5 - Mariscal Cáceres</h4>
+                                        <div class="dias-donacion">Última donación: hace 1 día</div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Zona 6 - Sin Prioridad -->
+                                <div class="zona-paso baja-prioridad">
+                                    <div class="prioridad-badge">Baja Prioridad</div>
+                                    <div class="imagen-zona">
+                                        <img src="../../imagenes/comedor5.png" alt="Zona Bayóvar">
+                                    </div>
+                                    <div class="contenido-zona">
+                                        <h4>Zona 6 - Bayóvar</h4>
+                                        <div class="dias-donacion">Última donación: hace 6 días</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECCIÓN 2: SELECCIONA LA ASOCIACIÓN -->
+            <section class="parte">
+                <div class="seccion-donar">
+                    <!-- CONTENEDOR CON BORDE -->
+                    <div class="contenedor-pasos">
+                        <!-- CABECERA CON NÚMERO DE PASO Y BOTÓN CARRITO -->
+                        <div class="cabecera-paso">
+                            <div class="numero-paso" data-paso="2">Selecciona la Asociación</div>
+                        </div>
+                        
+                        <div class="lista-asociaciones">
+                            <!-- Asociación 1 -->
+                            <div class="opcion-asociacion">
+                                <div class="asociacion-header">
+                                    <div>
+                                        <h4>Vaso de Leche Las Flores</h4>
+                                        <span class="tipo-asociacion">Vaso de Leche</span>
+                                    </div>
+                                </div>
+                                
+                                <p class="descripcion-asociacion">Programa de nutrición infantil que beneficia a familias de Las Flores.</p>
+                                
+                                <div class="meta-asociacion">
+                                    <div class="info-meta">
+                                        <span class="beneficiarios">80 beneficiarios</span>
+                                        <span class="progreso-texto">79 / 140 productos</span>
+                                    </div>
+                                    <div class="barra-progreso">
+                                        <div class="progreso-lleno" style="width: 56%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Asociación 2 -->
+                            <div class="opcion-asociacion">
+                                <div class="asociacion-header">
+                                    <div>
+                                        <h4>Comedor Popular Las Flores</h4>
+                                        <span class="tipo-asociacion">Comedor Popular</span>
+                                    </div>
+                                </div>
+                                
+                                <p class="descripcion-asociacion">Comedor comunitario gestionado por madres organizadas del barrio.</p>
+                                
+                                <div class="meta-asociacion">
+                                    <div class="info-meta">
+                                        <span class="beneficiarios">60 beneficiarios</span>
+                                        <span class="progreso-texto">130 / 130 productos</span>
+                                    </div>
+                                    <div class="barra-progreso">
+                                        <div class="progreso-lleno" style="width: 100%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- INFORMACIÓN DE DONACIÓN - DIV SEPARADO -->
+                        <div class="info-donacion-global">
+                            <h5>Información de Donación</h5>
+                            <p>Quedan 62 productos disponibles para alcanzar la meta de esta asociación.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+<!-- SECCIÓN 3: SELECCIONA LOS PRODUCTOS -->
+<section class="parte">
+    <div class="seccion-donar">
+        <!-- CONTENEDOR CON BORDE -->
+        <div class="contenedor-pasos">
+            <!-- CABECERA CON NÚMERO DE PASO Y BOTÓN CARRITO -->
+            <div class="cabecera-paso">
+                <div class="numero-paso" data-paso="3">Selecciona los Productos</div>
+                <button class="boton-carrito">🛒 Carrito</button>
+            </div>
+
+            <div class="grid-productos">
+                <!-- Producto 1: Arroz -->
+                <div class="producto-item">
+                    <div class="imagen-producto">
+                        <img src="../../imagenes/arroz.png" alt="Arroz">
+                    </div>
+                    <div class="contenido-producto">
+                        <div class="producto-header">
+                            <h4>Arroz</h4>
+                            <span class="categoria-producto">Abarrotes</span>
+                        </div>
+                        <div class="info-producto">
+                            <div class="precio-producto">S/ 3.50</div>
+                            <div class="unidad-producto">por kg</div>
+                        </div>
+                        <div class="controles-producto">
+                            <div class="maximo-texto">Máx: 3</div>
+                            <button class="boton boton-chico">Donar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 2: Fideos -->
+                <div class="producto-item">
+                    <div class="imagen-producto">
+                        <img src="../../imagenes/fideo.png" alt="Fideos">
+                    </div>
+                    <div class="contenido-producto">
+                        <div class="producto-header">
+                            <h4>Fideos</h4>
+                            <span class="categoria-producto">Abarrotes</span>
+                        </div>
+                        <div class="info-producto">
+                            <div class="precio-producto">S/ 2.80</div>
+                            <div class="unidad-producto">por kg</div>
+                        </div>
+                        <div class="controles-producto">
+                            <div class="maximo-texto">Máx: 3</div>
+                            <button class="boton boton-chico">Donar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 3: Aceite Vegetal -->
+                <div class="producto-item">
+                    <div class="imagen-producto">
+                        <img src="../../imagenes/aceite .png" alt="Aceite Vegetal">
+                    </div>
+                    <div class="contenido-producto">
+                        <div class="producto-header">
+                            <h4>Aceite Vegetal</h4>
+                            <span class="categoria-producto">Abarrotes</span>
+                        </div>
+                        <div class="info-producto">
+                            <div class="precio-producto">S/ 9.50</div>
+                            <div class="unidad-producto">por litro</div>
+                        </div>
+                        <div class="controles-producto">
+                            <div class="maximo-texto">Máx: 3</div>
+                            <button class="boton boton-chico">Donar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 4: Menestras -->
+                <div class="producto-item">
+                    <div class="imagen-producto">
+                        <img src="../../imagenes/menestras.png" alt="Menestras">
+                    </div>
+                    <div class="contenido-producto">
+                        <div class="producto-header">
+                            <h4>Menestras</h4>
+                            <span class="categoria-producto">Abarrotes</span>
+                        </div>
+                        <div class="info-producto">
+                            <div class="precio-producto">S/ 6.00</div>
+                            <div class="unidad-producto">por kg</div>
+                        </div>
+                        <div class="controles-producto">
+                            <div class="maximo-texto">Máx: 3</div>
+                            <button class="boton boton-chico">Donar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 5: Pollo -->
+                <div class="producto-item">
+                    <div class="imagen-producto">
+                        <img src="../../imagenes/pollo.png" alt="Pollo">
+                    </div>
+                    <div class="contenido-producto">
+                        <div class="producto-header">
+                            <h4>Pollo</h4>
+                            <span class="categoria-producto">Carnes</span>
+                        </div>
+                        <div class="info-producto">
+                            <div class="precio-producto">S/ 8.50</div>
+                            <div class="unidad-producto">por kg</div>
+                        </div>
+                        <div class="controles-producto">
+                            <div class="maximo-texto">Máx: 3</div>
+                            <button class="boton boton-chico">Donar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 6: Conservas de Atún -->
+                <div class="producto-item">
+                    <div class="imagen-producto">
+                        <img src="../../imagenes/conserva.png" alt="Conservas de Atún">
+                    </div>
+                    <div class="contenido-producto">
+                        <div class="producto-header">
+                            <h4>Conservas de Atún</h4>
+                            <span class="categoria-producto">Conservas</span>
+                        </div>
+                        <div class="info-producto">
+                            <div class="precio-producto">S/ 4.20</div>
+                            <div class="unidad-producto">por lata</div>
+                        </div>
+                        <div class="controles-producto">
+                            <div class="maximo-texto">Máx: 3</div>
+                            <button class="boton boton-chico">Donar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+            </div>
+        </main>
+    </div>
+</body>
+</html>

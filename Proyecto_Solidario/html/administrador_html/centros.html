@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Centros de Beneficio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="../../css/administrador.css">
+</head>
+<body>
+<div class="container">
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <p class="admin-role">Admin</p>
+      <p class="admin-title">Administrador</p>
+    </div>
+    <nav class="menu">
+      <a href="dashboard.html">
+        <i class="fas fa-chart-line"></i> Resumen
+      </a>
+      <a href="usuarios.html">
+        <i class="fas fa-users"></i> Usuarios
+      </a>
+      <a href="donaciones.html">
+        <i class="fas fa-hand-holding-heart"></i> Donaciones
+      </a>
+      <a href="centros.html" class="active">
+        <i class="fas fa-building"></i> Centros de Beneficio
+      </a>
+      <a href="reportes.html">
+        <i class="fas fa-chart-bar"></i> Reportes
+      </a>
+
+      <a href="../principal_html/index.html" class="logout">
+        <i class="fas fa-sign-out-alt"></i> Cerrar Sesión
+      </a>
+    </nav>
+  </aside>
+
+  <main class="main-content">
+    <header>Centros de Beneficio</header>
+    <div class="content">
+      <div class="cards">
+        <div class="card total">
+          <p class="title">Total Centros</p>
+          <h2>15</h2>
+          <p>1490 beneficiarios</p>
+        </div>
+        <div class="card activos">
+          <p class="title">Activos</p>
+          <h2>12</h2>
+          <p>80% del total</p>
+        </div>
+        <div class="card evaluacion">
+          <p class="title">En Evaluación</p>
+          <h2>2</h2>
+          <p>Inactivos: 1</p>
+        </div>
+        <div class="card tipos">
+          <p class="title">Por Tipo</p>
+          <p>Vasos: 4 | Comedores: 7 | Ollas: 3 | Escuelas: 1</p>
+        </div>
+      </div>
+
+      <div class="filtros">
+        <input type="text" placeholder="Buscar por nombre, zona o contacto..."/>
+        <select>
+          <option>Todos los estados</option>
+        </select>
+        <button class="btn-nuevo">
+          <i class="fas fa-plus"></i> Nuevo Centro
+        </button>
+      </div>
+
+      <div class="tabla">
+        <h3>Centros Registrados</h3>
+        <div class="tabla-contenedor">
+          <table>
+            <thead>
+              <tr>
+                <th>Centro</th>
+                <th>Zona</th>
+                <th>Contacto</th>
+                <th>Beneficiarios</th>
+                <th>Progreso</th>
+                <th>Estado</th>
+                <th>Última Donación</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Vaso de Leche Canto Grande<br><span class="direccion">Av. Principal 123</span></td>
+                <td>Zona 1 - Canto Grande</td>
+                <td>Rosa Martínez<br>987654321</td>
+                <td>120</td>
+                <td>
+                  <div class="barra"><div style="width: 93%"></div></div>
+                  <span>93%</span>
+                </td>
+                <td><span class="estado activo">Activo</span></td>
+                <td>15 Oct 2025</td>
+                <td><span class="accion"><i class="fas fa-eye"></i></span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+</body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reportes y Estadísticas</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="../../css/administrador.css">
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <p class="admin-role">Admin</p>
+        <p class="admin-title">Administrador</p>
+      </div>
+      <nav class="menu">
+        <a href="dashboard.html">
+          <i class="fas fa-chart-line"></i> Resumen
+        </a>
+        <a href="usuarios.html">
+          <i class="fas fa-users"></i> Usuarios
+        </a>
+        <a href="donaciones.html">
+          <i class="fas fa-hand-holding-heart"></i> Donaciones
+        </a>
+        <a href="centros.html">
+          <i class="fas fa-building"></i> Centros de Beneficio
+        </a>
+        <a href="reportes.html" class="active">
+          <i class="fas fa-chart-bar"></i> Reportes
+        </a>
+        <a href="../principal_html/index.html" class="logout">
+          <i class="fas fa-sign-out-alt"></i> Cerrar Sesión
+        </a>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+      <header>Reportes y Estadísticas</header>
+      <div class="content">
+        <!-- Tarjetas de estadísticas -->
+        <div class="cards">
+          <div class="card blue">
+            <h3>Donaciones Totales</h3>
+            <div class="number">12</div>
+            <small>S/ 1484.00</small>
+          </div>
+          <div class="card green">
+            <h3>Usuarios Activos</h3>
+            <div class="number">2,100</div>
+            <small>+15% este mes</small>
+          </div>
+          <div class="card purple">
+            <h3>Centros Activos</h3>
+            <div class="number">12</div>
+            <small>1490 beneficiarios</small>
+          </div>
+          <div class="card orange">
+            <h3>Tasa de Éxito</h3>
+            <div class="number">98%</div>
+            <small>Muy satisfactorio</small>
+          </div>
+        </div>
+
+        <!-- Gráfico de productos -->
+        <div class="panel">
+          <h4>Donaciones por Tipo de Producto</h4>
+          <p>Distribución de productos más donados</p>
+          <img src="../../imagenes/img_administrador/don_tipo.png" alt="Gráfico de barras de productos donados" class="grafico">
+          <button class="btn-exportar">
+            <i class="fas fa-download"></i> Exportar
+          </button>
+        </div>
+
+        <!-- Gráfico de regiones -->
+        <div class="panel">
+          <h4>Donaciones por Región</h4>
+          <p>Distribución geográfica de donaciones en San Juan de Lurigancho</p>
+          <img src="../../imagenes/img_administrador/don_region.png" alt="Gráfico de pastel de regiones" class="grafico">
+
+          <ul class="zona-lista">
+            <li>
+              <span><span class="dot blue"></span> Zona 1 - Canto Grande</span>
+              <strong>285</strong>
+            </li>
+            <li>
+              <span><span class="dot green"></span> Zona 2 - Zárate</span>
+              <strong>195</strong>
+            </li>
+            <li>
+              <span><span class="dot purple"></span> Zona 3 - Canto Rey</span>
+              <strong>165</strong>
+            </li>
+            <li>
+              <span><span class="dot orange"></span> Zona 4 - Las Flores</span>
+              <strong>145</strong>
+            </li>
+            <li>
+              <span><span class="dot pink"></span> Zona 5 - Mariscal Cáceres</span>
+              <strong>125</strong>
+            </li>
+            <li>
+              <span><span class="dot violet"></span> Zona 6 - Bayóvar</span>
+              <strong>85</strong>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Gráfico de frecuencia -->
+        <div class="panel">
+          <h4>Frecuencia de Donaciones</h4>
+          <p>Tendencia de donaciones en los últimos 6 meses</p>
+          <img src="../../imagenes/img_administrador/frec_don.png" alt="Gráfico de líneas de frecuencia" class="grafico">
+          <button class="btn-exportar">
+            <i class="fas fa-download"></i> Exportar
+          </button>
+        </div>
+
+        <!-- Exportar y resumen -->
+        <!-- En la sección del panel secundario, actualiza el summary-box: -->
+<div class="panel-secundario">
+  <div class="export-box">
+    <h3>Exportar Reportes Detallados</h3>
+    <ul>
+      <li><i class="fas fa-file-alt"></i> Reporte Completo de Donaciones</li>
+      <li><i class="fas fa-file-alt"></i> Reporte de Usuarios y Actividad</li>
+      <li><i class="fas fa-file-alt"></i> Reporte Financiero Mensual</li>
+      <li><i class="fas fa-file-alt"></i> Reporte de Centros de Beneficio</li>
+    </ul>
+  </div>
+
+  <div class="summary-box">
+    <h3>Resumen del Período</h3>
+    <ul>
+      <li>
+        <span>Total donado este mes</span>
+        <strong>S/ 519.40</strong>
+      </li>
+      <li>
+        <span>Familias beneficiadas</span>
+        <strong>850+</strong>
+      </li>
+      <li>
+        <span>Centros más activos</span>
+        <strong>12</strong>
+      </li>
+      <li>
+        <span>Crecimiento mensual</span>
+        <strong style="color: #10b981;">+18.5%</strong>
+      </li>
+      <li>
+        <span>Donaciones completadas</span>
+        <strong>45</strong>
+      </li>
+      <li>
+        <span>Tasa de éxito</span>
+        <strong style="color: #10b981;">98%</strong>
+      </li>
+    </ul>
+  </div>
+</div>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Donaciones Recibidas - Beneficiario</title>
+  <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+<div class="pagina">
+  <nav class="menu">
+    <div class="usuario">
+      <div class="foto">❤</div>
+      <div><p class="name">María López</p><p class="tipo">Beneficiario</p></div>
+    </div>
+    <div class="opciones">
+      <a href="beneficiario_dashboard.html" class="opcion">📈 Dashboard</a>
+      <a href="beneficiario_solicitar.html" class="opcion">📝 Solicitar Ayuda</a>
+      <a href="beneficiario_donaciones.html" class="opcion activa">📦 Donaciones Recibidas</a>
+      <a href="../principal_html/index.html" class="opcion">Cerrar Sesion</a>
+    </div>
+  </nav>
+
+  <main class="contenido">
+    <header class="top"><h1>Donaciones Recibidas</h1><div class="linea-naranja"></div></header>
+
+    <div class="secciones">
+      <div class="fila inicio filtros-don">
+        <button class="pildora-don activa" data-filter="all">Ver todo</button>
+        <button class="pildora-don" data-filter="perishable">Perecederos</button>
+        <button class="pildora-don" data-filter="non-perishable">No perecederos</button>
+      </div>
+
+      <div class="fila inicio wrap" id="grid-don">
+        <div class="caja tarjeta-donacion" data-type="non-perishable">
+          <div class="miniatura"><img src="../../imagenes/img_beneficiario/Alimentos_no_perecederos.jpg" alt=""></div>
+          <div class="cuerpo"><div class="fila"><h3>Arroz</h3><span class="etiqueta verde">No perecedero</span></div>
+            <p class="texto-chico">Cantidad: 15 kg</p><p class="texto-chico">Donante: Juan Pérez</p><p class="texto-muy-chico">12 Oct 2025</p></div>
+          <div class="pie"><span class="estado entregado">Recibido</span></div>
+        </div>
+
+        <div class="caja tarjeta-donacion" data-type="perishable">
+          <div class="miniatura"><img src="../../imagenes/img_beneficiario/Alimentos_perecederos.jpeg" alt=""></div>
+          <div class="cuerpo"><div class="fila"><h3>Manzanas</h3><span class="etiqueta roja">Perecedero</span></div>
+            <p class="texto-chico">Cantidad: 10 kg</p><p class="texto-chico">Donante: María González</p><p class="texto-muy-chico">10 Oct 2025</p></div>
+          <div class="pie"><span class="estado entregado">Recibido</span></div>
+        </div>
+
+        <div class="caja tarjeta-donacion" data-type="non-perishable">
+          <div class="miniatura"><img src="../../imagenes/img_beneficiario/Alimentos_no_perecederos.jpg" alt=""></div>
+          <div class="cuerpo"><div class="fila"><h3>Leche evaporada</h3><span class="etiqueta verde">No perecedero</span></div>
+            <p class="texto-chico">Cantidad: 12 unidades</p><p class="texto-chico">Donante: Carlos Ruiz</p><p class="texto-muy-chico">08 Oct 2025</p></div>
+          <div class="pie"><span class="estado entregado">Recibido</span></div>
+        </div>
+
+        <div class="caja tarjeta-donacion" data-type="perishable">
+          <div class="miniatura"><img src="../../imagenes/img_beneficiario/Alimentos_perecederos.jpeg" alt=""></div>
+          <div class="cuerpo"><div class="fila"><h3>Papa</h3><span class="etiqueta roja">Perecedero</span></div>
+            <p class="texto-chico">Cantidad: 20 kg</p><p class="texto-chico">Donante: Rosa Torres</p><p class="texto-muy-chico">06 Oct 2025</p></div>
+          <div class="pie"><span class="estado entregado">Recibido</span></div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+
+<script>
+  const botones = document.querySelectorAll('.pildora-don');
+  const tarjetas = document.querySelectorAll('#grid-don .tarjeta-donacion');
+
+  function aplicar(filtro){
+    botones.forEach(b=>b.classList.toggle('activa', b.dataset.filter===filtro));
+    tarjetas.forEach(t=>{
+      const ok = filtro==='all' || t.dataset.type===filtro;
+      t.style.display = ok ? '' : 'none';
+    });
+  }
+
+  botones.forEach(b=>{
+    b.addEventListener('click', ()=>{
+      const f = b.dataset.filter;
+      location.hash = f;
+      aplicar(f);
+    });
+  });
+
+  const inicial = location.hash.replace('#','') || 'all';
+  aplicar(inicial);
+</script>
+</body>
+</html>

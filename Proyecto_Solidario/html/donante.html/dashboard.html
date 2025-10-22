@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Sistema Donaciones</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+    <!--barra de navegacion-->
+    <div class="pagina">
+        <nav class="menu">
+            <div class="usuario">
+                <div class="foto">❤️</div>
+                <div>
+                    <p class="name">Juan Pérez</p>
+                    <p class="tipo">Donante</p>
+                </div>
+            </div>
+            
+            <div class="opciones">
+                <a href="dashboard.html" class="opcion activa">📈 Dashboard</a>
+                <a href="donar_donante.html" class="opcion">🛒 Donar</a>
+                <a href="donaciones.html" class="opcion">📋 Historial</a>
+                <a href="mensaje.html" class="opcion">💬 Mensajes</a>
+            </div>
+            <a href="../principal_html/index.html" class="opcion">
+            <button class="salir">🚪 Cerrar Sesión</button></a>
+        </nav>
+
+        <!--CONTENIDO-->
+        <main class="contenido">
+            <header class="top">
+                <h1>Dashboard</h1>
+                <div class="linea-naranja"></div>
+            </header>
+            
+            <div class="secciones">
+                <!-- ESTADÍSTICAS PRINCIPALES -->
+                <section class="parte">
+                    <div class="numeros">
+                        <div class="caja caja-estadistica">
+                            <div class="titulo-caja">
+                                <span>Total Entregas</span>
+                                <span>📦</span>
+                            </div>
+                            <div class="valor">8</div>
+                            <div class="info">entregas realizadas</div>
+                        </div>
+                        
+                        <div class="caja caja-estadistica">
+                            <div class="titulo-caja">
+                                <span>Total Productos</span>
+                                <span>❤️</span>
+                            </div>
+                            <div class="valor">142</div>
+                            <div class="info">productos donados</div>
+                        </div>
+                        
+                        <div class="caja caja-estadistica">
+                            <div class="titulo-caja">
+                                <span>Asociaciones</span>
+                                <span>👥</span>
+                            </div>
+                            <div class="valor">4</div>
+                            <div class="info">organizaciones apoyadas</div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- GRÁFICOS ESTADÍSTICOS (IMÁGENES) -->
+                <section class="parte">   
+                    <div class="numeros">
+                        <div class="caja caja-grafico">
+                            <h3>Evolución Mensual de Donaciones</h3>
+                            <div class="grafico-placeholder">
+                                <img src="../../imagenes/diagramabarras_dashboard.png" alt="Gráfico de evolución mensual" style="width: 100%; height: 250px; background: #f0f0f0; border-radius: 8px;">
+                                <div class="texto-chico" style="text-align: center; margin-top: 10px;">Gráfico de evolución mensual</div>
+                            </div>
+                        </div>
+                        
+                        <div class="caja caja-grafico">
+                            <h3>Distribución por Asociación</h3>
+                            <div class="grafico-placeholder">
+                                <img src="../../imagenes/diagramabarra2_dashboard.png" alt="Gráfico de distribución" style="width: 100%; height: 250px; background: #f0f0f0; border-radius: 8px;">
+                                <div class="texto-chico" style="text-align: center; margin-top: 10px;">Distribución por asociación</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- CAMPAÑAS DESTACADAS -->
+                <section class="parte">
+                    <div class="fila">
+                        <div class="titulo-parte">
+                            <h2>Campañas Destacadas</h2>
+                            <div class="linea-titulo"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="lista-campanas">
+                        <!-- Campaña 1 -->
+                        <div class="caja campana" style="background-color:rgb(248, 230, 233)">
+                            <div class="campana-header">
+                                <div class="fila campana-titulo">
+                                    <h3>Emergencia Alimentaria - Canto Grande</h3>
+                                    <span class="prioridad-alta">Crítico</span>
+                                </div>
+                                <p class="desc-campana">Familias afectadas por las lluvias necesitan alimentos básicos urgentemente</p>
+                            </div>
+                            
+                            <div class="progreso">
+                                <div class="fila progreso-top">
+                                    <span>Recaudación</span>
+                                    <span>84.0% completado</span>
+                                </div>
+                                <div class="barra">
+                                    <div class="avance" style="width: 84%"></div>
+                                </div>
+                                <div class="texto-chico">+ 120 beneficiarios</div>
+                            </div>
+                            
+                            <div class="separador"></div>
+                            
+                            <div class="necesidades-especificas">
+                                <h4>Necesidades Específicas</h4>
+                                <div class="items-necesidades-detalle">
+                                    <div class="item-necesidad">
+                                        <div class="fila">
+                                            <span class="producto-necesidad">Arroz</span>
+                                            <span class="cantidad-necesidad">145 / 200 kg</span>
+                                        </div>
+                                        <div class="mini-barra">
+                                            <div style="width: 72%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="item-necesidad">
+                                        <div class="fila">
+                                            <span class="producto-necesidad">Fideos</span>
+                                            <span class="cantidad-necesidad">89 / 150 kg</span>
+                                        </div>
+                                        <div class="mini-barra">
+                                            <div style="width: 59%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="item-necesidad">
+                                        <div class="fila">
+                                            <span class="producto-necesidad">Aceite Vegetal</span>
+                                            <span class="cantidad-necesidad">32 / 80 litros</span>
+                                        </div>
+                                        <div class="mini-barra">
+                                            <div style="width: 40%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="separador"></div>
+                            
+                            <div class="apoyo-campana">
+                                    <button class="boton">Apoyar Campaña</button>
+                            </div>
+                        </div>
+
+                        <!-- Campaña 2 -->
+                        <div class="caja campana" style="background-color:#f8ebd7;">
+                            <div class="campana-header">
+                                <div class="fila campana-titulo">
+                                    <h3>Nutrición Infantil - Vaso de Leche</h3>
+                                    <span class="prioridad-media">Alto</span>
+                                </div>
+                                <p class="desc-campana">Campaña para asegurar la nutrición de niños menores de 6 años</p>
+                            </div>
+                            
+                            <div class="progreso">
+                                <div class="fila progreso-top">
+                                    <span>Recaudación</span>
+                                    <span>60.0% completado</span>
+                                </div>
+                                <div class="barra">
+                                    <div class="avance" style="width: 60%"></div>
+                                </div>
+                                <div class="texto-chico">+ 85 beneficiarios</div>
+                            </div>
+                            
+                            <div class="separador"></div>
+                            
+                            <div class="necesidades-especificas">
+                                <h4>Necesidades Específicas</h4>
+                                <div class="items-necesidades-detalle">
+                                    <div class="item-necesidad">
+                                        <div class="fila">
+                                            <span class="producto-necesidad">Leche Evaporada</span>
+                                            <span class="cantidad-necesidad">180 / 300 latas</span>
+                                        </div>
+                                        <div class="mini-barra">
+                                            <div style="width: 60%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="item-necesidad">
+                                        <div class="fila">
+                                            <span class="producto-necesidad">Avena</span>
+                                            <span class="cantidad-necesidad">28 / 50 kg</span>
+                                        </div>
+                                        <div class="mini-barra">
+                                            <div style="width: 56%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="item-necesidad">
+                                        <div class="fila">
+                                            <span class="producto-necesidad">Quínua</span>
+                                            <span class="cantidad-necesidad">15 / 40 kg</span>
+                                        </div>
+                                        <div class="mini-barra">
+                                            <div style="width: 37%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="separador"></div>
+                            
+                            <div class="apoyo-campana">
+                                <button class="boton">Apoyar Campaña</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- MIS ÚLTIMAS DONACIONES -->
+                <section class="parte">
+                    <div class="fila">
+                        <div class="titulo-parte">
+                            <h2>Mis Últimas Donaciones</h2>
+                            <div class="linea-titulo"></div>
+                        </div>
+                        <button class="boton boton-chico">Ver Historial Completo</button>
+                    </div>
+                    
+                    <!-- Donación 1 -->
+                    <div class="caja donacion">
+                        <div class="fila donacion-top">
+                            <div>
+                                <h3>Vaso de Leche Canto Grande</h3>
+                                <p class="lugar">Zona 1 - Canto Grande</p>
+                            </div>
+                            <span class="estado entregado">Entregado</span>
+                        </div>
+                        
+                        <div class="tabla-donacion">
+                            <div class="fila fila-tabla">
+                                <div class="columna-tabla">
+                                    <div class="valor-tabla">35</div>
+                                    <div class="texto-muy-chico">unidades</div>
+                                </div>
+                                <div class="columna-tabla">
+                                    <div class="valor-tabla" style="color: #FF9800;">S/ 70.00</div>
+                                    <div class="texto-muy-chico">donado</div>
+                                </div>
+                                <div class="columna-tabla">
+                                    <div class="valor-tabla">15 Oct 2025</div>
+                                    <div class="texto-muy-chico">entrega</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="separador"></div>
+                        
+                        <div class="productos-donacion">
+                            <div class="texto-chico">Productos donados:</div>
+                            <div class="lista-productos-lineal">
+                                <span class="producto-tag">Leche Evaporada (10 latas)</span>
+                                <span class="producto-tag">Pan Francés (20 unidades)</span>
+                                <span class="producto-tag">Azúcar (5 kg)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Donación 2 -->
+                    <div class="caja donacion">
+                        <div class="fila donacion-top">
+                            <div>
+                                <h3>Comedor Esperanza</h3>
+                                <p class="lugar">Zona 1 - Canto Grande</p>
+                            </div>
+                            <span class="estado entregado">Entregado</span>
+                        </div>
+                        
+                        <div class="tabla-donacion">
+                            <div class="fila fila-tabla">
+                                <div class="columna-tabla">
+                                    <div class="valor-tabla">38</div>
+                                    <div class="texto-muy-chico">unidades</div>
+                                </div>
+                                <div class="columna-tabla">
+                                    <div class="valor-tabla" style="color: #FF9800;">S/ 178.00</div>
+                                    <div class="texto-muy-chico">donado</div>
+                                </div>
+                                <div class="columna-tabla">
+                                    <div class="valor-tabla">12 Oct 2025</div>
+                                    <div class="texto-muy-chico">entrega</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="separador"></div>
+                        
+                        <div class="productos-donacion">
+                            <div class="texto-chico">Productos donados:</div>
+                            <div class="lista-productos-lineal">
+                                <span class="producto-tag">Avena (18 kg)</span>
+                                <span class="producto-tag">Fríjoles (10 kg)</span>
+                                <span class="producto-tag">Aceite Vegetal (5 litros)</span>
+                                <span class="producto-tag-mas">+1 más</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Donación 3 -->
+                    <div class="caja donacion">
+                        <div class="fila donacion-top">
+                            <div>
+                                <h3>Olla Común San Juan</h3>
+                                <p class="lugar">Zona 1 - Canto Grande</p>
+                            </div>
+                            <span class="estado en-camino">En camino</span>
+                        </div>
+                        
+                        <div class="tabla-donacion">
+                            <div class="fila fila-tabla">
+                                <div class="columna-tabla">
+                                    <div class="valor-tabla">33</div>
+                                    <div class="texto-muy-chico">unidades</div>
+                                </div>
+                                <div class="columna-tabla">
+                                    <div class="valor-tabla" style="color: #FF9800;">S/ 89.60</div>
+                                    <div class="texto-muy-chico">donado</div>
+                                </div>
+                                <div class="columna-tabla">
+                                    <div class="valor-tabla">10 Oct 2025</div>
+                                    <div class="texto-muy-chico">entrega</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="separador"></div>
+                        
+                        <div class="productos-donacion">
+                            <div class="texto-chico">Productos donados:</div>
+                            <div class="lista-productos-lineal">
+                                <span class="producto-tag">Papa (20 kg)</span>
+                                <span class="producto-tag">Cebolla (8 kg)</span>
+                                <span class="producto-tag">Zanahoria (5 kg)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- DIV DE AGRADECIMIENTO -->
+                    <div class="caja agradecimiento">
+                        <div class="agradecimiento-contenido">
+                            <div class="icono-agradecimiento">❤️</div>
+                            <div class="texto-agradecimiento">
+                                <div class="titulo-agradecimiento">Gracias por tu solidaridad</div>
+                                <p class="mensaje-agradecimiento">Has impactado positivamente a 4 asociaciones</p>
+                            </div>
+                            <button class="boton boton-donar-ahora">Donar Ahora</button>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
